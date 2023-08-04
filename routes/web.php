@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -56,3 +57,5 @@ Route::prefix('tables')->group(function () {
         return view('tables.tabulator.index');
     });
 });
+
+Route::get('/data-user', [UserController::class, 'index']);
