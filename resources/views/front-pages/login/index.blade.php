@@ -67,14 +67,14 @@
                                 <p>Sign In to your account</p>
                             </div>
 
-                            <form class="mt-4" action="/home">
-
+                            <form class="mt-4" action="/loginproses" method="post">
+                                @csrf
                                 <div class="mb-3">
-                                    <input type="text" class="form-control" placeholder="Username" autofocus>
+                                    <input type="text" class="form-control" name="username" placeholder="Username" autofocus>
                                 </div>
 
                                 <div class="mb-3">
-                                    <input type="password" class="form-control" placeholder="Password">
+                                    <input type="password" class="form-control" name="password" placeholder="Password">
                                 </div>
 
                                 <div class="form-check">

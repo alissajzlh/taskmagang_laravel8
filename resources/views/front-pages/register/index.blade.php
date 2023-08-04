@@ -67,8 +67,8 @@
                                 <p>Come join the Nifty community! Let's set up your account.</p>
                             </div>
 
-                            <form class="mt-5" action="/auth/login">
-
+                            <form class="mt-5" action="/auth/login" method="post">
+                                @csrf
                                 <div class="w-md-400px d-inline-flex row g-3 mb-4">
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control" placeholder="First name" aria-label="First name" autofocus>

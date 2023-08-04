@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth;
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,14 +30,21 @@ Route::prefix('home')->group(function () {
         return view('dashboard-3.index');
     });
 });
-Route::prefix('auth')->group(function () {
-    Route::get('/login', function () {
-        return view('front-pages.login.index');
-    });
-    Route::get('/register', function () {
-        return view('front-pages.register.index');
-    });
-});
+
+Route::get('/auth/login', [LoginController::class, 'index']);
+Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
+
+Route::get('/auth/register', [RegisterController::class, 'index']);
+Route::post('/auth/register', [RegisterController::class, 'store']);
+
+// Route::prefix('auth')->group(function () {
+//     Route::get('/login', function () {
+//         return view('front-pages.login.index');
+//     });
+//     Route::get('/register', function () {
+//         return view('front-pages.register.index');
+//     });
+// });
 Route::prefix('tables')->group(function () {
     Route::get('/static-tables', function () {
         return view('tables.static-tables.index');
