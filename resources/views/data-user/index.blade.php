@@ -96,6 +96,20 @@
                                 </div>
                                 <!-- END : Left toolbar -->
 
+                                {{-- Search --}}
+                                {{-- <div class="row justify-content-end">
+                                    <div class="col-md-6">
+                                        <form action="/data-user">
+                                            <div class="input-group mb-3">
+                                                <input type="text" class="form-control" placeholder="Search.." name="search">
+                                                <button class="btn btn-primary" type="submit">Search</button>
+                                              </div>
+                                              
+                                        </form>
+                                    </div>
+                                </div> --}}
+                                {{-- End Search --}}
+
                             </div>
                         </div>
 
@@ -129,6 +143,8 @@
                                 </table>
                             </div>
 
+                            {{ $users->links() }}
+
                             {{-- <nav class="text-align-center mt-5" aria-label="Table navigation">
                                 <ul class="pagination justify-content-center">
                                     <li class="page-item disabled">
@@ -152,6 +168,7 @@
 
                 </div>
             </div>
+
             <!-- FOOTER -->
             @include('layouts.footer')
             <!-- END - FOOTER -->

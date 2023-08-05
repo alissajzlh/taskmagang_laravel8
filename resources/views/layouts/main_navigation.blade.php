@@ -63,7 +63,7 @@
                         <ul class="mainnav__menu nav flex-column">
 
                             <!-- Link with submenu -->
-                                <a href="/home" class="mininav-toggle nav-link active"><i class="demo-pli-home fs-5 me-2"></i>
+                                <a href="/home" class="mininav-toggle nav-link"><i class="demo-pli-home fs-5 me-2"></i>
                                     <span class="nav-label ms-1">Dashboard</span>
                                 </a>
                             <!-- END : Link with submenu -->

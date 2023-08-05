@@ -9,7 +9,10 @@ class UserController extends Controller
 {
     public function index()
     {
-        $users = User::latest()->get();
+        // $users = User::latest()->get();
+        $users = User::paginate(10);
+        
         return view('data-user.index', compact('users'));
+    
     }
 }
