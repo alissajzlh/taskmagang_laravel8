@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Auth;
+use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UserController;
@@ -36,7 +36,7 @@ Route::get('/auth/login', [LoginController::class, 'index']);
 Route::post('/loginproses', [LoginController::class, 'loginproses'])->name('loginproses');
 
 Route::get('/auth/register', [RegisterController::class, 'index']);
-Route::post('/auth/register', [RegisterController::class, 'store']);
+Route::post('/registeruser', [RegisterController::class, 'registeruser'])->name('registeruser');
 
 // Route::prefix('auth')->group(function () {
 //     Route::get('/login', function () {

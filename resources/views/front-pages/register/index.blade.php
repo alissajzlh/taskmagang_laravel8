@@ -67,7 +67,7 @@
                                 <p>Come join the Nifty community! Let's set up your account.</p>
                             </div>
 
-                            <form class="mt-5" action="/auth/login" method="post">
+                            <form class="mt-5" action="/registeruser" method="post">
                                 @csrf
                                 <div class="w-md-400px d-inline-flex row g-3 mb-4">
                                     <div class="col-sm-6">
@@ -77,13 +77,13 @@
                                         <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
                                     </div>
                                     <div class="col-12">
-                                        <input type="text" class="form-control" placeholder="Username" aria-label="Username">
+                                        <input type="text" class="form-control" name="username" placeholder="Username" aria-label="Username">
                                     </div>
                                     <div class="col-12">
-                                        <input type="email" class="form-control" placeholder="Email" aria-label="Email">
+                                        <input type="email" class="form-control" name="email" placeholder="Email" aria-label="Email">
                                     </div>
                                     <div class="col-sm-6">
-                                        <input type="password" class="form-control" placeholder="Password" aria-label="Password">
+                                        <input type="password" class="form-control" name="password" placeholder="Password" aria-label="Password">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control" placeholder="Confirm Password" aria-label="Confirm Password">

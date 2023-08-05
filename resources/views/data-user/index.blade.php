@@ -7,7 +7,7 @@
     <meta http-equiv="content-type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1">
     <meta name="description" content="A table is an arrangement of information or data, typically in rows and columns, or possibly in a more complex structure.">
-    <title>Static Tables | Nifty - Admin Template</title>
+    <title>Data User | Nifty - Admin Template</title>
 
     <!-- STYLESHEETS -->
     <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~--- -->
@@ -89,9 +89,9 @@
                                 <!-- Left toolbar -->
                                 <div class="col-md-6 d-flex gap-1 align-items-center mb-3">
                                     <button class="btn btn-primary hstack gap-2 align-self-center">
-                                        <i class="demo-psi-add fs-5"></i>
-                                        <span class="vr"></span>
-                                        Add New
+                                        <a href="/auth/register" class="nav-link mininav-toggle"><i class="demo-psi-add fs-5"></i>
+                                            <span class="nav-label mininav-content ms-1">Add New</span>
+                                        </a>
                                     </button>
                                 </div>
                                 <!-- END : Left toolbar -->
@@ -110,11 +110,13 @@
                                             <th>Action</th>
                                         </tr>
                                     </thead>
+
+                                    @foreach($users as $us)
                                     <tbody>
                                         <tr>
-                                            <td><a class="btn-link" href="#">1</a></td>
-                                            <td>Steve N. Horton</td>
-                                            <td>alisa@gmail.com</td>
+                                            <td><a class="btn-link" href="#">{{ $loop->iteration }}</a></td>
+                                            <td>{{ $us->username }}</td>
+                                            <td>{{ $us->email }}</td>
                                             <td class="fs-5">
                                                 <button type="submit" class="btn btn-primary">Edit</button>
                                                 <button type="submit" class="btn btn-primary">Delete</button>
@@ -123,6 +125,7 @@
                                             </td>
                                         </tr>
                                     </tbody>
+                                    @endforeach
                                 </table>
                             </div>
 
